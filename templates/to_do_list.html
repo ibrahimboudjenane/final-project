@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>To Do List App</title>
+</head>
+<body>
+    <header>
+        <a href="/">To Do</a>
+    <a href="{{ url_for('cutdown') }}">Timer</a>
+    </header>
+    
+    <main>
+        <form method="POST">
+            <input type="text" name="task" autofocus autocomplete="off" placeholder="Add a new task" required>
+            <input type="submit" value="Add Task">
+        </form>
+        
+        <div id="feedback"></div>
+        
+        <div class="task-section">
+            <h2>Current Tasks ({{ tasks|length }})</h2>
+            <ul id="taskList">
+                {% for task in tasks %}
+                    <li>
+                        <input type="checkbox" class="task-checkbox" data-task="{{ task }}">
+                        <span class="task-text">{{ task }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="task-section">
+            <h2>Completed Tasks ({{ completed_tasks|length }})</h2>
+            <ul id="completedList">
+                {% for task in completed_tasks %}
+                    <li class="completed">
+                        <input type="checkbox" class="completed-checkbox" data-task="{{ task }}" checked>
+                        <span class="task-text completed-text">{{ task }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <button id="deleteAll" class="delete-btn">Clear All Tasks</button>
+    </main>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
