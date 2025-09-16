@@ -1,6 +1,6 @@
-Overview
+📌 Overview
 
-A simple To-Do List web application designed to help users manage their daily tasks. Built as a practice project to strengthen Frontend development skills, with an optional backend version using Flask + SQLite.
+A simple To-Do List web application built with HTML, CSS, and JavaScript. The app helps users manage their daily tasks in a clean and intuitive interface.
 
 🚀 Features
 
@@ -8,24 +8,20 @@ Add new tasks
 
 Mark tasks as completed or pending
 
-Tasks stored in Local Storage (Frontend version)
+Persistent storage using Local Storage
 
-Optional persistence with SQLite (Flask version)
+Responsive design for desktop and mobile
 
 🛠️ Tech Stack
 
 Frontend: HTML, CSS, JavaScript
 
-Backend (optional): Python, Flask
-
-Database (optional): SQLite
+Storage: Local Storage
 
 🎯 Learning Outcomes
 
-Practiced DOM manipulation in JavaScript
+Practiced DOM manipulation and event handling in JavaScript
 
-Learned how to use Local Storage for persistence
+Implemented task persistence with Local Storage
 
-Gained basic experience with Flask routing (optional)
-
-Improved understanding of UI design and user interaction
+Strengthened skills in UI/UX design and responsive layouts
